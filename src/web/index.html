@@ -2,18 +2,26 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>KeePass Web</title>
-  <meta name="description" content="A KeePass web interface">
+  <title>Done</title>
+  <meta name="description" content="A todo list manager">
   <link rel="icon" href="/img/favicon.png" type="image/png" />
 </head>
 <body>
-  Hello there.
-
+  <h1>Todo list</h1>
   <div id="ember-container"></div>
+
+  <script type="text/x-handlebars" data-template-name="todos">
+    <ul>
+      {{#each content}}
+        <li>{{title}}</li>
+      {{/each}}
+    </ul>
+  </script>
 
   <script src="/js/vendor/jquery.min.js"></script>
   <script src="/js/vendor/handlebars.min.js"></script>
   <script src="/js/vendor/ember.js"></script>
+  <script src="/js/vendor/ember-data.js"></script>
   <script src="/js/done.js"></script>
 </body>
 </html>
